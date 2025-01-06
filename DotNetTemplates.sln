@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTemplate", "src\ConsoleTemplate\ConsoleTemplate.csproj", "{205A3F9C-2874-4F1C-95D6-6356A248ECF4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F6A021EC-5F23-450A-80E7-826B05324304}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,8 @@ Global
 		{205A3F9C-2874-4F1C-95D6-6356A248ECF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{205A3F9C-2874-4F1C-95D6-6356A248ECF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{205A3F9C-2874-4F1C-95D6-6356A248ECF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{205A3F9C-2874-4F1C-95D6-6356A248ECF4} = {F6A021EC-5F23-450A-80E7-826B05324304}
 	EndGlobalSection
 EndGlobal
