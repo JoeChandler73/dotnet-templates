@@ -4,13 +4,15 @@ using Microsoft.Extensions.Options;
 namespace ConsoleTemplate;
 
 public class MyApp(
-    IMyLogic logic,
+    IService service,
     ILogger<MyApp> logger,
     IOptions<MySettings> options)
 {
     public Task StartAsync()
     {
-        logic.Say(options.Value.Message);
+        logger.LogInformation("Starting service");
+        
+        service.Say(options.Value.Message);
         
         return Task.CompletedTask;
     }

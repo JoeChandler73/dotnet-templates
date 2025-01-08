@@ -1,6 +1,6 @@
 namespace ConsoleTemplate;
 
-public interface IMyLogic
+public interface IService
 {
     void Say(string message);
 }

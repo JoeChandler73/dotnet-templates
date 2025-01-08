@@ -6,7 +6,7 @@ var hostBuilder = Host.CreateDefaultBuilder(args)
     .ConfigureServices((builder, services) =>
     {
         services.Configure<MySettings>(builder.Configuration.GetSection("App"));
-        services.AddTransient<IMyLogic, MyLogic>();
+        services.AddTransient<IService, Service>();
         services.AddSingleton<MyApp>();
     });
 

@@ -2,7 +2,7 @@ using Microsoft.Extensions.Logging;
 
 namespace ConsoleTemplate;
 
-public class MyLogic(ILogger<MyLogic> logger) : IMyLogic
+public class Service(ILogger<Service> logger) : IService
 {
     public void Say(string message)
     {
