@@ -1,6 +1,6 @@
 using BlazorAppTemplate.Models;
 
-namespace BlazorAppTemplate.Store.WeatherUseCase;
+namespace BlazorAppTemplate.Store.WeatherUseCase.Actions;
 
 public class FetchDataResultAction(IEnumerable<WeatherForecast> forecasts)
 {

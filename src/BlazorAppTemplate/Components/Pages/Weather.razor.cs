@@ -1,5 +1,6 @@
 using BlazorAppTemplate.Models;
 using BlazorAppTemplate.Store.WeatherUseCase;
+using BlazorAppTemplate.Store.WeatherUseCase.Actions;
 using Fluxor;
 using Microsoft.AspNetCore.Components;
 
@@ -11,11 +12,12 @@ public partial class Weather
     private IState<WeatherState> WeatherState { get; set; }
     
     [Inject]
-    private IDispatcher Dispatcher { get; set; }
+    private IDispatcher? Dispatcher { get; set; }
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        Dispatcher.Dispatch(new FetchDataAction());
+        
+        Dispatcher?.Dispatch(new FetchDataAction());
     }
 }

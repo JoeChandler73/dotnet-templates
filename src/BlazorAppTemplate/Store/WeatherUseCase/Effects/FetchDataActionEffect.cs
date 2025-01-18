@@ -1,7 +1,8 @@
 using BlazorAppTemplate.Services;
+using BlazorAppTemplate.Store.WeatherUseCase.Actions;
 using Fluxor;
 
-namespace BlazorAppTemplate.Store.WeatherUseCase;
+namespace BlazorAppTemplate.Store.WeatherUseCase.Effects;
 
 public class FetchDataActionEffect(IWeatherForecastService weatherForecastService) : Effect<FetchDataAction>
 {

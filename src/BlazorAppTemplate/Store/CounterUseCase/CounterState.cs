@@ -2,15 +2,14 @@ using Fluxor;
 
 namespace BlazorAppTemplate.Store.CounterUseCase;
 
-[FeatureState]
-public class CounterState
+public record CounterState
 {
-    public int ClickCount { get; }
+    public int ClickCount { get; init; }
+}
 
-    private CounterState() {} // Required for creating initial state
-
-    public CounterState(int clickCount)
-    {
-        ClickCount = clickCount;
-    }
+public class CounterFeature : Feature<CounterState>
+{
+    public override string GetName() => "Counter";
+    
+    protected override CounterState GetInitialState() => new() { ClickCount = 0 };
 }

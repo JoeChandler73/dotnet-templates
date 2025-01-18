@@ -3,17 +3,16 @@ using Fluxor;
 
 namespace BlazorAppTemplate.Store.WeatherUseCase;
 
-[FeatureState]
-public class WeatherState
+public record WeatherState
 {
-    public bool IsLoading { get; }
-    public IEnumerable<WeatherForecast>? Forecasts { get; }
+    public bool IsLoading { get; init; }
+    public IEnumerable<WeatherForecast>? Forecasts { get; init; }
+}
 
-    private WeatherState() { }
+public class WeatherFeature : Feature<WeatherState>
+{
+    public override string GetName() => "Weather";
     
-    public WeatherState(bool isLoading, IEnumerable<WeatherForecast>? forecasts)
-    {
-        IsLoading = isLoading;
-        Forecasts = forecasts ?? Array.Empty<WeatherForecast>();
-    }
+    protected override WeatherState GetInitialState() => 
+        new() {IsLoading = false, Forecasts = Array.Empty<WeatherForecast>()};
 }

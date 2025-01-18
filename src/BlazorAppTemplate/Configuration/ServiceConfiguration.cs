@@ -1,5 +1,6 @@
 using BlazorAppTemplate.Services;
 using Fluxor;
+using MudBlazor.Services;
 
 namespace BlazorAppTemplate.Configuration;
 
@@ -9,6 +10,7 @@ public static class ServiceConfiguration
     {
         builder.Services
             .AddSingleton<IWeatherForecastService, WeatherForecastService>()
+            .AddMudServices()
             .AddFluxor(options => options.ScanAssemblies(typeof(Program).Assembly))
             .AddRazorComponents()
             .AddInteractiveServerComponents();
