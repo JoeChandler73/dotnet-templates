@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 
-namespace ConsoleTemplate;
+namespace ConsoleTemplate.Services;
 
 public class Service(ILogger<Service> logger) : IService
 {

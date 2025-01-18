@@ -1,3 +1,5 @@
+using ConsoleTemplate.Configuration;
+using ConsoleTemplate.Services;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 

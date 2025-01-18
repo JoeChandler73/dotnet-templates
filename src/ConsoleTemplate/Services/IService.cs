@@ -1,4 +1,4 @@
-namespace ConsoleTemplate;
+namespace ConsoleTemplate.Services;
 
 public interface IService
 {

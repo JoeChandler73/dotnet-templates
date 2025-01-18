@@ -1,4 +1,4 @@
-namespace ConsoleTemplate;
+namespace WebApiTemplate.Configuration;
 
 public record MySettings
 {

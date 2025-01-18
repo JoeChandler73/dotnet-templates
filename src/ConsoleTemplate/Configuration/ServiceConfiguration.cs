@@ -1,3 +1,4 @@
+using ConsoleTemplate.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -11,7 +12,7 @@ public static class ServiceConfiguration
             .ConfigureServices((builder, services) =>
             {
                 services.Configure<MySettings>(builder.Configuration.GetSection("App"));
-                services.AddTransient<IService, Service>();
+                services.AddSingleton<IService, Service>();
                 services.AddSingleton<MyApp>();
             });
 
