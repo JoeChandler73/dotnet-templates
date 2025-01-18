@@ -1,11 +1,20 @@
+using BlazorAppTemplate.Store.CounterUseCase;
+using Fluxor;
+using Microsoft.AspNetCore.Components;
+
 namespace BlazorAppTemplate.Components.Pages;
 
 public partial class Counter
 {
-    private int currentCount = 0;
+    [Inject]
+    private IState<CounterState> CounterState { get; set; }
+    
+    [Inject]
+    public IDispatcher Dispatcher { get; set; }
 
     private void IncrementCount()
     {
-        currentCount++;
+        var action = new IncrementCounterAction();
+        Dispatcher.Dispatch(action);
     }
 }

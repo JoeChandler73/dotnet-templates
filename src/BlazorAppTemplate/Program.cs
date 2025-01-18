@@ -1,10 +1,9 @@
 using BlazorAppTemplate.Components;
+using BlazorAppTemplate.Configuration;
+using Fluxor;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+var builder = WebApplication.CreateBuilder(args)
+    .Configure();
 
 var app = builder.Build();
 
