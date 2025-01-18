@@ -8,7 +8,7 @@ public static class ServiceConfiguration
     public static IHostBuilder Configure(this IHostBuilder hostBuilder)
     {
         hostBuilder
-            .ConfigureServices((builder, services) =>
+            .ConfigureServices((_, services) =>
             {
                 services.AddHostedService<Worker>();
             });
