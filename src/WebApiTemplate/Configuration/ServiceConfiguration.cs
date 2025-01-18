@@ -9,7 +9,9 @@ public static class ServiceConfiguration
         builder.Services
             .Configure<MySettings>(builder.Configuration.GetSection("App"))
             .AddSingleton<IService, Service>()
-            .AddOpenApi();
+            .AddOpenApi()
+            .AddEndpointsApiExplorer()
+            .AddSwaggerGen();
         
         return builder;
     }
